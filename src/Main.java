@@ -47,4 +47,9 @@ public class Main {
         String expectedUrl = "https://www.fiscal.treasury.gov/government/";
         Assert.assertEquals(expectedUrl, currentUrl);
     }
+    @Test
+    public void jenkinsMsg() {
+        System.out.println("Jenkins Test");
+    }
+
 }
