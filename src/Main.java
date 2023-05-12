@@ -8,7 +8,6 @@ public class Main {
     public static WebDriver driver;
     @BeforeClass
     public static void setupChrome() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Henry H\\IdeaProjects\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.fiscal.treasury.gov/");
         driver.manage().window().maximize();
