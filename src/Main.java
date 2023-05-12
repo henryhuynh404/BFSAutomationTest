@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.Test;
+
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static WebDriver driver;
     @BeforeClass
@@ -46,6 +49,21 @@ public class Main {
         String expectedUrl = "https://www.fiscal.treasury.gov/government/";
         Assert.assertEquals(expectedUrl, currentUrl);
     }
+    @Test
+    public void testSubMenu() throws InterruptedException{
+        System.out.println("Loading Sub Menus()");
+        driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[2]/button")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[3]/button")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"header-menu\"]/div[2]/h-box[2]/v-box[1]/a/img")).click();
+        Thread.sleep(1000);
+    }
+    
     @Test
     public void jenkinsMsg() {
         System.out.println("Jenkins Test");
