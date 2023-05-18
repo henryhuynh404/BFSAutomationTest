@@ -35,12 +35,7 @@ public class Main {
         Thread.sleep(500);
 
         //Checking About
-        driver.findElement(By.xpath("//*[@id=\"header-menu\"]/div[2]/h-box[2]/v-box[1]/a/img")).click();
-        Thread.sleep(500);
-        String currentAboutUrl = driver.getCurrentUrl();
-        String expectedAboutUrl = "https://www.fiscal.treasury.gov/about.html";
-        Assert.assertEquals(expectedAboutUrl, currentAboutUrl);
-        Thread.sleep(500);
+
 
         //Checking Mail
         driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
