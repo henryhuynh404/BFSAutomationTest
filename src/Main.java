@@ -161,7 +161,7 @@ public class Main {
     }
     @Test
     public void jenkinsMsg() {
-        System.out.println("Jenkins Build Test");
+        System.out.println("Jenkins Build Test Deploy");
     }
 
 }
