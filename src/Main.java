@@ -40,7 +40,12 @@ public class Main {
         String currentAboutUrl = driver.getCurrentUrl();
         String expectedAboutUrl = "https://www.fiscal.treasury.gov/about.html";
         Assert.assertEquals(expectedAboutUrl, currentAboutUrl);
+<<<<<<< HEAD
         Thread.sleep(1000);
+=======
+        Thread.sleep(500);
+        System.out.println("About Page Test Case Pulled From Git");
+>>>>>>> 6860b5c2d34417741c986978d52d43ed58b24eeb
 
         //Checking Mail
         driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
