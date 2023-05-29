@@ -159,7 +159,7 @@ public class Main {
     }
     @Test
     public void jenkinsMsg() {
-        System.out.println("Jenkins Build Test Version 2");
+        System.out.println("Jenkins Build Test Version 3");
     }
 
 }
