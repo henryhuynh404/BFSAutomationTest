@@ -35,7 +35,32 @@ public class Main {
         Thread.sleep(500);
 
         //Checking About
-        
+        driver.findElement(By.xpath("//*[@id=\"header-menu\"]/div[2]/h-box[2]/v-box[1]/a/img")).click();
+        Thread.sleep(500);
+        String currentAboutUrl = driver.getCurrentUrl();
+        String expectedAboutUrl = "https://www.fiscal.treasury.gov/about.html";
+        Assert.assertEquals(expectedAboutUrl, currentAboutUrl);
+        Thread.sleep(500);
+
+        //Checking Mail
+        driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id=\"header-menu\"]/div[2]/h-box[2]/v-box[2]/a/img")).click();
+        Thread.sleep(500);
+        String currentMailingUrl = driver.getCurrentUrl();
+        String expectedMailUrl = "https://www.fiscal.treasury.gov/mailinglists.html";
+        Assert.assertEquals(expectedMailUrl, currentMailingUrl);
+        Thread.sleep(500);
+
+        //Checking News
+        driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
+        Thread.sleep(500);
+        driver.findElement(By.xpath("//*[@id=\"header-menu\"]/div[2]/h-box[2]/v-box[3]/a/img")).click();
+        Thread.sleep(500);
+        String currentNewsUrl = driver.getCurrentUrl();
+        String expectedNewsUrl = "https://www.fiscal.treasury.gov/news/";
+        Assert.assertEquals(expectedNewsUrl, currentNewsUrl);
+        Thread.sleep(500);
 
         //Checking Reports
         driver.findElement(By.xpath("//*[@id=\"header-site\"]/div[3]/content-lock/h-box/v-box[2]/h-box/v-box[1]/button")).click();
